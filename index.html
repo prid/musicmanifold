@@ -1,0 +1,61 @@
+<html><head><title>Music Search</title>
+
+<style>
+a { cursor: pointer; color: blue; }
+a:hover,a.hover { text-decoration: underline; }
+table{width:100%;}
+table,th,td
+{
+overflow:auto;
+border:1px solid #CCCCB2;
+border-collapse:collapse;
+}
+#musicPlayer {
+background: rgba(0,0,0,0.7);
+	box-shadow: #000 0 0 10px;
+position:fixed;
+bottom:0px;
+height:100px;
+width:100%;
+}
+</style></head><body>
+<div id="searchContainer"><form method="post">
+  <input id="inputArea" style="height:2em;width:100%;" type="text" name="keywords"><center><input id="searchButton" type="button" value="Search" ></center>
+  </form></div>
+  <link rel="stylesheet" href="https://99e80a5f32be48fce793d71c1f8d5be03d5f32bc-www.googledrive.com/host/0B8zu3E-1YyJJTThzdTdQTzQ1dFE/musicsearch/style.css">
+<div id="bgmPlayer">
+	<div id="button"></div>
+
+		<div id="player">
+		<b class="light" id="play" >&#9654;</b>
+			<div class="ctrl">
+				<div class="tag"><strong></strong></div>
+				<div class="control">
+					<div class="volume right">
+						<div class="mute icon left"></div>
+						<div class="slider left ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+							<div class="pace" style="width: 50%;"></div>
+						<a class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 50%;"></a></div>
+					</div>
+				</div>
+				<div class="progress">
+					<div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+						<div class="loaded" style="width: 0%;"></div>
+						<div class="pace" style="width: 0%;"></div>
+					<a class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 0.9680364372371482%;"></a></div>
+					<div class="timer left"></div>
+					<div class="right">
+						<div class="repeat icon once"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+</div>
+<script src="script.js"></script>
+<script src="spin.js"></script>
+<script src="mp3Player.js"></script>
+  
+<script>document.getElementById('searchButton').onclick=function(){if(this.value!='Searching'){counter=0;this.value='Searching';destroy(document.getElementById('resultSign'));initResultTable();search(this.form,this,1);}};</script>
+</body></html>
