@@ -1,0 +1,256 @@
+.left {
+	float: left
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both
+}
+
+#playerWrapper {
+	position: relative;
+}
+
+#bgmPlayer {
+	position: fixed;
+	bottom: -135px;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+}
+
+
+
+#player * {
+	color: #fff
+}
+
+#player {
+	width: 100%;
+	height: 150px;
+	background: rgba(0,0,0,0.7);
+	box-shadow: #000 0 0 10px;
+}
+
+#player .light {
+	font-size:100px;
+	text-align:center;
+	margin-top:10px;
+	//margin-left:25px;
+	//margin-bottom:px;
+	//margin-right:25px;
+	position: absolute;
+	//left: 0px;
+	//top: 0;
+	width: 150px;
+	height: 150px;
+	//margin:25px;
+	//background: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	//background: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	cursor:pointer;
+	z-index:15;
+}
+//#player:hover .light {left: 100%;transition: 0.5s;-moz-transition: 0.5s;-webkit-transition: 0.5s;}
+
+#player .ctrl {
+	margin-left: 155px;
+	line-height: 16px;
+	padding: 10px;
+}
+
+.tag{
+	top:25px;
+	position:absolute;
+}
+#player .ctrl .tag strong,#player .ctrl .tag span {
+	display: block;
+	text-overflow: ellipsis
+}
+
+#player .ctrl .tag span {
+	font-size: 12px;
+	margin-top: 5px;
+	color: #eee
+}
+
+#player .ctrl .icon {
+	background-image: url(sprite.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	opacity: .6;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	margin:5px;
+	-moz-transition:opacity .3s;
+	-webkit-transition:opacity .3s;
+	transition:opacity .3s;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#player .ctrl .icon:hover, #player .ctrl .icon.enable {
+	opacity: 1
+}
+
+#player .ctrl .icon:active {
+	opacity: .3
+}
+
+#player .ctrl .control {
+	margin-top: 10px;
+	height: 25px
+}
+
+.rewind {
+	background-position: 0 0;
+}
+.playback.active {
+	background-position: -16px 0;
+}
+.playback {
+	background-position: -32px 0;
+}
+.fastforward {
+	background-position: -48px 0;
+}
+.shuffle {
+	background-position: -64px 0;
+}
+.repeat {
+	background-position: -80px 0;
+}
+.volume.right{
+	margin-top:25px;
+}
+.volume .mute.enable {
+	background-position: -96px 0;
+}
+.volume .mute {
+	background-position: -112px 0;
+}
+
+#player .ctrl .control .volume .slider {
+	margin-top: 12px;
+	
+	margin-left: 7px;
+	width: 100px
+}
+
+#player .ctrl .progress {
+	margin-top: 50px;
+	//originally 10px
+}
+
+#player .ctrl .progress .timer {
+	font-size: 12px;
+	color: #ccc;
+	margin-top: 8px
+}
+
+
+#player .ctrl .progress .repeat.once,#player .ctrl .progress .repeat.all {
+	opacity: 1
+}
+
+#player .ctrl .progress .repeat.once {
+	position: relative
+}
+
+#player .ctrl .progress .repeat.once:before {
+	content: "1";
+	position: absolute;
+	top: -3px;
+	right: -5px;
+	font-size: 10px
+}
+
+#player .ctrl,.footer {
+	text-shadow: 0 1px 5px #000
+}
+
+.slider {
+	background: rgba(0,0,0,0.3);
+	height: 5px;
+	position: relative;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5) inset;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5) inset;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5) inset
+}
+
+.slider:hover a,.slider.enable a {
+	opacity: 1
+}
+
+.slider a {
+	cursor:pointer;
+	background: #fff;
+	margin-left: -7.5px;
+	position: absolute;
+	opacity: 0;
+	width: 15px;
+	height: 15px;
+	bottom:0;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+	-moz-transition: opacity .3s;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s
+}
+
+.slider .loaded,.slider .pace {
+	position: absolute;
+	height: 100%;
+	opacity: .7;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px
+}
+
+.slider .loaded {
+	background: rgba(255,255,255,0.1)
+}
+
+.slider .pace {
+	background: #09F
+}
+
+#bg1,#bg2 {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -10;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: center
+}
+#button{
+	cursor:pointer;
+	height:15px;
+	width:100%;
+	top:0px;
+	position:absolute;
+	box-shadow: #000 0 0 10px;
+}
