@@ -22,7 +22,7 @@ width:100%;
 <div id="searchContainer"><form method="post">
   <input id="inputArea" style="height:2em;width:100%;" type="text" name="keywords"><center><input id="searchButton" type="button" value="Search" ></center>
   </form></div>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="res/style.css">
 <div id="bgmPlayer">
 	<div id="button"></div>
 
@@ -53,9 +53,9 @@ width:100%;
 		
 	
 </div>
-<script src="script.js"></script>
-<script src="spin.js"></script>
-<script src="mp3Player.js"></script>
+<script src="res/script.js"></script>
+<script src="res/spin.js"></script>
+<script src="res/mp3Player.js"></script>
   
 <script>document.getElementById('searchButton').onclick=function(){if(this.value!='Searching'){counter=0;this.value='Searching';destroy(document.getElementById('resultSign'));initResultTable();search(this.form,this,1);}};</script>
 </body></html>
